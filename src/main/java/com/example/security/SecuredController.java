@@ -1,0 +1,15 @@
+package com.example.security;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api")
+public class SecuredController {
+    @GetMapping("hello")
+    public ResponseEntity<String> securedGet(){
+        return ResponseEntity.ok("Hello Spring Security!");
+    }
+}
